@@ -28,7 +28,7 @@ h1{
     margin: 1rem 0;
 }
 
-.answer{
+#user-input{
     height: 50px;
     width: 80px;
     margin-bottom: 20px;
@@ -45,5 +45,9 @@ button{
 
 p{
     margin-top: 10px;
+    
+}
+
+.message{
     visibility: hidden;
 }
