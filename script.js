@@ -24,12 +24,21 @@ const generateRandomNums = () => {
 
 const displaySuccess = () => {
     message.classList.toggle("message");
+    message.textContent = "Correct";
 }
 
 const displayFailure = () => {
     message.classList.toggle("message");
     message.textContent = "Incorrect";
 }
+
+const notANumberError = () => {
+    message.classList.toggle("message");
+    message.textContent = "Incorrect input. Try again"
+}
+
+
+
 
 const toggleBtns = () => {
     btn.style.display = 'none';
@@ -39,6 +48,11 @@ const toggleBtns = () => {
 const toggleBtnsAgain = () => {
     btn.style.display = 'inline-block';
     btn2.style.display = 'none';
+    answer.textContent = "";
+    message.textContent = "";
+    userInput.value = "";
+    message.classList.toggle("message");
+    generateRandomNums();
 }
 
 
@@ -48,17 +62,20 @@ const checkUserInput = () => {
     
     if(input === correctAnswer){
         displaySuccess();
-    }else{
+    }else if(isNaN(input)){
+        notANumberError();
+    }
+    else{
         displayFailure();
     }
 
     answer.textContent = correctAnswer;
 
-
-     
+    
+    toggleBtns();
 }
 
-btn.addEventListener('click', toggleBtns);
+btn.addEventListener('click', checkUserInput);
 btn2.addEventListener('click', toggleBtnsAgain)
 
 generateRandomNums();
