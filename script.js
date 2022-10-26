@@ -3,6 +3,7 @@ const numTwo = document.getElementById("numTwo");
 const answer = document.getElementById('correct-answer');
 const message = document.getElementById('message');
 const btn = document.getElementById('btn');
+const btn2 = document.getElementById('btn2');
 const userInput = document.getElementById('user-input')
 
 let firstNum = 0;
@@ -30,6 +31,18 @@ const displayFailure = () => {
     message.textContent = "Incorrect";
 }
 
+const toggleBtns = () => {
+    btn.style.display = 'none';
+    btn2.style.display = "inline-block";
+}
+
+const toggleBtnsAgain = () => {
+    btn.style.display = 'inline-block';
+    btn2.style.display = 'none';
+}
+
+
+
 const checkUserInput = () => {
     let input = parseInt(userInput.value);
     
@@ -39,10 +52,13 @@ const checkUserInput = () => {
         displayFailure();
     }
 
+    answer.textContent = correctAnswer;
+
 
      
 }
 
-btn.addEventListener('click', checkUserInput);
+btn.addEventListener('click', toggleBtns);
+btn2.addEventListener('click', toggleBtnsAgain)
 
 generateRandomNums();

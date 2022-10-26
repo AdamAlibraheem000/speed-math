@@ -35,13 +35,23 @@ h1{
     font-size: 25px;
 }
 
-button{
+#btn{
     display: inline-block;
     height: 30px;
     width: 90px;
     background-color: green;
     color: #fff;
 }
+
+#btn2{
+    display: none;
+    height: 30px;
+    width: 90px;
+    background-color: green;
+    color: #fff;
+}
+
+
 
 p{
     margin-top: 10px;
