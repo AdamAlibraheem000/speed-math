@@ -1,0 +1,1 @@
+const numOne = document.getElementById()

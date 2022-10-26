@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    border-radius: 5px;
+    height: 500px;
+    width: 300px;
+}
+
+h1{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.answer{
+    height: 50px;
+    width: 80px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+button{
+    display: inline-block;
+    height: 30px;
+    width: 90px;
+    background-color: green;
+    color: #fff;
+}
+
+p{
+    margin-top: 10px;
+    visibility: hidden;
+}
